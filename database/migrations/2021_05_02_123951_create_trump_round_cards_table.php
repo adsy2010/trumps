@@ -17,7 +17,7 @@ class CreateTrumpRoundCardsTable extends Migration
             $table->id();
             $table->foreignId('trump_round_id');
             $table->foreignId('trump_player_id');
-            $table->foreignId('trump_card_id');
+            $table->foreignId('trump_game_player_card_id');
             $table->timestamps();
         });
     }
