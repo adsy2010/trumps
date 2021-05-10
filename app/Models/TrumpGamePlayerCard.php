@@ -12,4 +12,19 @@ class TrumpGamePlayerCard extends Model
     protected $guarded = ['id'];
 
     protected $fillable = ['trump_card_id','trump_game_id','trump_player_id'];
+
+    public function card()
+    {
+        return $this->belongsTo(TrumpCard::class);
+    }
+
+    public function player()
+    {
+        return $this->belongsTo(TrumpPlayer::class);
+    }
+
+    public function game()
+    {
+        return $this->belongsTo(TrumpGame::class);
+    }
 }
